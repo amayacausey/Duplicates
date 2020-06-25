@@ -3,6 +3,15 @@ import java.util.Scanner;
 public class ArrayExercise2 {
 public static void main (String[] args) {
     Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter a String to reverse");
+        String userInput= sc.nextLine();
+        int amountOfCharacters= userInput.length();
+        for (int counter = amountOfCharacters-1;counter>=0;counter--) {
+            System.out.print(userInput.charAt(counter));
+        }
+        System.out.println("\n--------------------------------");
+
+
         int[] arr = new int [10];
         int n = arr.length;
 
@@ -11,7 +20,9 @@ public static void main (String[] args) {
             System.out.println("Enter a number. Number 0"+(i+1));
             arr[i]=sc.nextInt();
         }
+         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+
 
         n = removeDuplicates(arr, n);
 
